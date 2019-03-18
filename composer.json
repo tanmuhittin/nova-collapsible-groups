@@ -1,0 +1,28 @@
+{
+    "name": "tanmuhittin/nova-collapsible-groups",
+    "description": "Makes nova core theme navigation collapsible",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhittin Tan",
+            "email": "tanmuhittin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TanMuhittin\\NovaCollapsibleGroups\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TanMuhittin\\NovaCollapsibleGroups\\CollapsibleGroupsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
