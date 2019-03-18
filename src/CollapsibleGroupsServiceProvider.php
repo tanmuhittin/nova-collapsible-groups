@@ -1,6 +1,6 @@
 <?php
 
-namespace AlexBowers\NovaCategoriseResources;
+namespace TanMuhittin\NovaCollapsibleGroups;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
