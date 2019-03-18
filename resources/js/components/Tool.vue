@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4 ref="nova-category" class="ml-2 mb-4 text-sm text-white-50% uppercase tracking-wide cursor-pointer hover:text-white" @click.prevent="toggle">
+        <h4 class="ml-2 mb-4 text-sm text-white-50% uppercase tracking-wide cursor-pointer hover:text-white" @click.prevent="toggle">
             {{ header }}
         </h4>
 
