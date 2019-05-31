@@ -1,6 +1,8 @@
 <template>
     <div>
         <h4 class="ml-2 mb-4 text-sm text-white-50% uppercase tracking-wide hover:text-white" @click.prevent="toggle">
+            <span v-if="is_expanded">-</span>
+            <span v-else>+</span>
             {{ header }}
         </h4>
 
