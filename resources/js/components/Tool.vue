@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h4 class="ml-2 mb-4 text-sm text-white-50% uppercase tracking-wide hover:text-white" @click.prevent="toggle">
+        <h4 class="ml-4 mb-4 text-sm text-white-50% uppercase tracking-wide hover:text-white" @click.prevent="toggle">
+            <span v-if="is_expanded">-</span>
+            <span v-else>+</span>
             {{ header }}
         </h4>
 
@@ -15,14 +17,14 @@
         props: {
             header: String,
             last: Boolean,
-			expanded: Boolean
+            expanded: Boolean
         },
-        data(){
+        data() {
             return {
                 is_expanded : false,
             }
         },
-        created(){
+        created() {
             this.is_expanded = this.expanded;
         },
         methods: {
@@ -34,7 +36,7 @@
 </script>
 
 <style scoped>
-    h4{
+    h4 {
         cursor:pointer;
     }
 </style>
