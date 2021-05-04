@@ -14,9 +14,10 @@
         foreach ($resources as $r) {
             $my_resources[] = $r::uriKey();
         }
+        $expanded = in_array(explode("/",url()->current())[count(explode("/",url()->current()))-1], $my_resources);
         ?>
         <grouped-resource-collapsible header="{{ $group }}" :last="@json($loop->last)"
-                                      :expanded="@if(in_array(explode("/",url()->current())[count(explode("/",url()->current()))-1],$my_resources)) true @else false @endif">
+                                      :expanded="@if($expanded || $loop->first) true @else false @endif">
             @foreach ($resources as $key => $resource)
                 <li class="leading-wide mb-4 text-sm" key="{{ $key }}">
                     <router-link :to="{
@@ -24,7 +25,7 @@
                     params: {
                         resourceName: '{{ $resource::uriKey() }}'
                     }
-                }" class="text-white ml-6 no-underline dim block">
+                }" class="text-white ml-8 no-underline dim block">
                         {{ $resource::label() }}
                     </router-link>
                 </li>
